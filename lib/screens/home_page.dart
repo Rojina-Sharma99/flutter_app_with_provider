@@ -71,7 +71,6 @@ class _HomePageState extends State<HomePage> {
   // Builds a scrollable list of posts.
 
   Widget getDataUI(List<Posts> posts) {
-    
     final provider = Provider.of<PostsProvider>(context, listen: false);
 
     return RefreshIndicator(
