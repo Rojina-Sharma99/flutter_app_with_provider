@@ -2,7 +2,7 @@
 
 A simple Flutter application that fetches posts from an API (JSONPlaceholder) using http and displays them in a clean UI.
 It uses Provider for state management, includes unit tests and widget tests, and follows a clean project structure.
--
+
 
 ##  Features
 
