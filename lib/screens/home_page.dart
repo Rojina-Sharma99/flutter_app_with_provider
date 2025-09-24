@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<PostsProvider>(context);
-    provider.getDataFromApi(); // fetch data
+    // provider.getDataFromApi(); // fetch data
 
     return Scaffold(
       appBar: AppBar(title: Text("Posts With Provider")),
@@ -54,7 +54,10 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SpinKitFadingCircle(color: Colors.deepPurple, size: 70.0),
+          SpinKitFadingCircle(
+            color: Color.fromARGB(255, 89, 150, 228),
+            size: 70.0,
+          ),
           Text("Loading..."),
         ],
       ),
