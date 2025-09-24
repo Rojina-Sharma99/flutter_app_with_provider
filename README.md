@@ -20,20 +20,21 @@ The app demonstrates API integration using http, state management with Provider,
 ##  Project Structure (Clean Architecture)
 
 lib/
-├── models/ # Data models
-│ └── posts.dart
+├── models/                # Data models
+│   └── posts.dart
 │
-├── providers/ # State management and API Interigation
-│ └── posts_provider.dart
+├── providers/             # State management and API integration
+│   └── posts_provider.dart
 │
-├── screens/ # UI screens
-│ ├── home_page.dart
-│ └── posts_details_page.dart
+├── screens/               # UI screens
+│   ├── home_page.dart
+│   └── post_details_page.dart
 │
-└── main.dart # App entry point
+└── main.dart              # App entry point
 
-Test/__|--Provider_unit_test
-       |-- widget_test
+test/
+├── posts_provider_test.dart   # Unit tests for provider
+└── home_page_test.dart        # Widget tests for UI
 
 
 
