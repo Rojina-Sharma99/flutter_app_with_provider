@@ -10,6 +10,7 @@ The app demonstrates API integration using http, state management with Provider,
 - Fetch posts from a public API (JSONPlaceholder).
 - Display post titles in a clean list view.
 - Tap a post to see more details (title + body + userID).
+- If any error, tap a reload floating button to retry again.
 - Handles loading with loading indicator making responsive UI, handle error, and success states.
 - Clean and beginner-friendly code structure.
 - Material 3 design with simple custom theme.
@@ -31,10 +32,16 @@ lib/
 │
 └── main.dart # App entry point
 
+Test/__|--Provider_unit_test
+       |-- widget_test
+
+
+
 This is a simplified clean structure:
-- **Models** → represent API data (`Posts`).
-- **Providers** → fetch data + manage loading/error states and success.
-- **Screens** → Flutter UI (Home & Details).
+- **Models** -> represent API data (`Posts`).
+- **Providers** -> fetch data + manage loading/error states and success.
+- **Screens** -> Flutter UI (Home page  & Post_details page).
+- **Tests** -> unit test and widget test
 
 
 ##  Tech Stack
@@ -72,12 +79,13 @@ This project includes both unit and widget tests.
 Run all tests:
 
   flutter test
+  (if you want to run specific then: flutter test/post_provider_test.dart   or flutter test/widget_test.dart  )
 
 Included Tests
 
-1. Unit Test: Tests the PostsProvider / service for fetching posts.
+1. Unit Test: Tests the PostsProvider / service for fetching posts .
 
-2. Widget Test: Ensures the HomePage shows posts list after fetching.
+2. Widget Test: Ensures the HomePage shows Appbar exist and show the title.
 
 
 ## Notes
@@ -85,6 +93,7 @@ Included Tests
 Data is fetched from JSONPlaceholder
 After sucessfull run Post will be display on the screen in List view.
 If API fails, an error message is displayed 
+Retry button will be on bottom right corner to retry.
 
 This is done by Rojina Shrama
 
