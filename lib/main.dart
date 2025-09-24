@@ -1,4 +1,5 @@
-import 'package:assessment_app/Pages/home_page.dart';
+
+import 'package:assessment_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
           
           debugShowCheckedModeBanner: false,
-          home: HomePage(),
+          home: HomeScreen(),
         );
   }
 }
