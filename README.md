@@ -10,6 +10,7 @@ It uses Provider for state management, includes unit tests and widget tests, and
 - Display post titles in a clean list view.
 - Pull to refresh: Refresh the screen instantly with a smooth pull-down gesture.
 - A sleek, modern scrollbar for better navigation through long lists and content.
+- Hold one selected post to see splash effect before navigating inside post.
 - View post details on a separate screen with favourite and share icon.
 - Tap the favorite button to mark an item: the icon turns red for quick visual feedback.
 - Retry button when API fails
@@ -117,9 +118,8 @@ Data is fetched from JSONPlaceholder
 After sucessfull run Post will be display on the screen in List view.
 Post list can be refreshed , scrollable and can be add to favourite
 If API fails, an error message is displayed 
-Retry button will be on bottom right corner to retry.
+Retry button wi##ScreenShots
 
-##ScreenShots
 
 
 
