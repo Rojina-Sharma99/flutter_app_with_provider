@@ -1,7 +1,7 @@
 import 'package:assessment_app/providers/posts_provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-// A unit test to verify that PostsProvider fetches data correctly from the API
+// A unit test to verify that PostsProvider fetches data correctly from the API and post is not empty.
 void main() {
   test('PostsProvider should fetches data correctly', () async {
     //Arrange
