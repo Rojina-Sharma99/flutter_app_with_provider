@@ -60,18 +60,20 @@ class _PostDetailPageState extends State<PostDetailPage> {
                   children: [
                     IconButton(
                       onPressed: () {
-                        setState(() {
+                        setState(() { // using this for extra ui feature
                           isFavorite = !isFavorite; // toggle state
                         });
                       },
+                      //icon button for favourite
                       icon: Icon(
                         isFavorite ? Icons.favorite : Icons.favorite_border,
                         color: isFavorite ? Colors.red : null,
                       ),
                     ),
+                    //icon button for share
                     IconButton(
                       onPressed: () {
-                        // You can add share functionality here later
+                        
                       },
                       icon: const Icon(Icons.share),
                     ),
