@@ -25,30 +25,24 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<PostsProvider>(context);
-    provider.getDataFromApi();
+    provider.getDataFromApi(); // fetch data
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Posts With Provider"),
-        backgroundColor: Colors.deepPurple[200],
-      ),
+      appBar: AppBar(title: Text("Posts With Provider")),
 
+      // show different UI depending on state, is loading/ get error/ get data
       body: provider.isLoading
           ? getLoadingUI()
           : provider.error.isNotEmpty
           ? getErrorUI(provider.error)
           : getDataUI(provider.data),
 
-      //  Adding FloatingActionButton for retry
+      //  Adding FloatingActionButton for retry if error occurs
       floatingActionButton: provider.error.isNotEmpty
           ? FloatingActionButton(
               onPressed: () => provider.getDataFromApi(),
               child: const Icon(Icons.refresh),
             )
-<<<<<<< HEAD
-            
-=======
->>>>>>> 827ddc1 (final update on API integration)
           : null,
     );
   }
@@ -75,28 +69,35 @@ class _HomePageState extends State<HomePage> {
   }
 
   // Builds a scrollable list of posts.
-  ListView getDataUI(List<Posts> posts) {
-    return ListView.builder(
-      itemCount: posts.length,
-      itemBuilder: (context, index) {
-        final post = posts[index];
-        return ListTile(
-          title: Text(post.title),
-          leading: CircleAvatar(
-            child: Text(post.id.toString()),
-          ), // display post id in circular avatar
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => PostDetailPage(post: post)),
-          ),
 
-          // subtitle: Text(
-          //   post.body,
-          //   maxLines: 1,
-          //   overflow: TextOverflow.ellipsis,
-          //),
-        );
+  Widget getDataUI(List<Posts> posts) {
+    
+    final provider = Provider.of<PostsProvider>(context, listen: false);
+
+    return RefreshIndicator(
+      onRefresh: () async {
+        await provider.getDataFromApi(); // must return Future<void>
       },
+      child: Scrollbar(
+        thumbVisibility: true, // always show the scrollbar
+
+        child: ListView.builder(
+          itemCount: posts.length,
+          itemBuilder: (context, index) {
+            final post = posts[index];
+            return ListTile(
+              title: Text(post.title),
+              leading: CircleAvatar(child: Text(post.id.toString())),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostDetailPage(post: post),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }

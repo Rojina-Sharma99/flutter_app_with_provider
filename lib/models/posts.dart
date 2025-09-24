@@ -4,6 +4,7 @@ class Posts {
   final String title;
   final String body;
 
+// Constructor to create a Post object
   Posts({
     required this.userId,
     required this.id,
@@ -12,6 +13,7 @@ class Posts {
     required List data,
   });
 
+// Factory constructor: creates a Post object from JSON data and map each from json
   factory Posts.fromJson(Map<String, dynamic> json) {
     return Posts(
       userId: json['userId'],
