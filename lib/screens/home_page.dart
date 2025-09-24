@@ -38,12 +38,21 @@ class _HomePageState extends State<HomePage> {
           : provider.error.isNotEmpty
           ? getErrorUI(provider.error)
           : getDataUI(provider.data),
+
+      //  Adding FloatingActionButton for retry
+      floatingActionButton: provider.error.isNotEmpty
+          ? FloatingActionButton(
+              onPressed: () => provider.getDataFromApi(),
+              child: const Icon(Icons.refresh),
+            )
+            
+          : null,
     );
   }
 
   //here returns a loading spinner UI shown while posts are being fetched.
 
-  Widget getLoadingUI() {
+  Center getLoadingUI() {
     return const Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -54,21 +63,25 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-// Returns an error UI with a red text message.
-  Widget getErrorUI(String error) {
+
+  // Returns an error UI with a red text message.
+  Center getErrorUI(String error) {
     return Center(
       child: Text(error, style: TextStyle(color: Colors.red)),
     );
   }
-// Builds a scrollable list of posts. 
-  Widget getDataUI(List<Posts> posts) {
+
+  // Builds a scrollable list of posts.
+  ListView getDataUI(List<Posts> posts) {
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: (context, index) {
         final post = posts[index];
         return ListTile(
           title: Text(post.title),
-          leading: CircleAvatar(child: Text(post.id.toString())), // display post id in circular avatar
+          leading: CircleAvatar(
+            child: Text(post.id.toString()),
+          ), // display post id in circular avatar
           onTap: () => Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => PostDetailPage(post: post)),
