@@ -8,7 +8,10 @@ It uses Provider for state management, includes unit tests and widget tests, and
 
 - Fetch posts from a REST API (JSONPlaceholder).
 - Display post titles in a clean list view.
-- View post details on a separate screen
+- Pull to refresh: Refresh the screen instantly with a smooth pull-down gesture.
+- A sleek, modern scrollbar for better navigation through long lists and content.
+- View post details on a separate screen with favourite and share icon.
+- Tap the favorite button to mark an item: the icon turns red for quick visual feedback.
 - Retry button when API fails
 - Handles loading with loading indicator making responsive UI, handle error, and success states.
 - Clean architecture (models, providers, screens separated)
@@ -69,6 +72,10 @@ flutter_test (unit & widget testing)
 
 ##  How to Run the App
 
+First step is running [flutter doctor ] that will show  the health of our Flutter environment, which SDKs and tools are installed and whether anything is missing. If everything is good then move to run and test the app.
+
+
+
 1. Clone the repository:
      ```bash
      git clone https://github.com/Rojina-Sharma99/flutter_app_with_provider.git
@@ -108,8 +115,11 @@ Included Tests
 
 Data is fetched from JSONPlaceholder
 After sucessfull run Post will be display on the screen in List view.
+Post list can be refreshed , scrollable and can be add to favourite
 If API fails, an error message is displayed 
 Retry button will be on bottom right corner to retry.
+
+##ScreenShots
 
 
 
