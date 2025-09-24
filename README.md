@@ -8,17 +8,26 @@ It uses Provider for state management, includes unit tests and widget tests, and
 
 - Fetch posts from a REST API (JSONPlaceholder).
 - Display post titles in a clean list view.
-- Pull to refresh: Refresh the screen instantly with a smooth pull-down gesture.
-- A sleek, modern scrollbar for better navigation through long lists and content.
-- Hold one selected post to see splash effect before navigating inside post.
-- View post details on a separate screen with favourite and share icon.
-- Tap the favorite button to mark an item: the icon turns red for quick visual feedback.
+- View post details on a separate screen.
 - Retry button when API fails
 - Handles loading with loading indicator making responsive UI, handle error, and success states.
 - Clean architecture (models, providers, screens separated)
 - Material 3 design with simple custom theme.
 - Unit tests for data fetching logic
 - Widget tests for UI validation
+
+
+## Additional Features
+
+#Home page
+ - Pull to refresh: Refresh the screen instantly with a smooth pull-down gesture.
+ - A sleek, modern scrollbar for better navigation through long lists and content.
+ - Long press on one selected post to see splash effect before navigating inside post.
+   
+ #Posts detail page
+ - Favourite icon and share icon in details posts screen.
+ - Tap the favorite button to mark an item: the icon turns red for quick visual feedback.
+ - Guest user Id with person icon and chip for better UI.
 
 
  
