@@ -12,7 +12,11 @@ class PostsProvider extends ChangeNotifier {
 
   Future<void> getDataFromApi() async {
     try {
-      final response = await http.get(Uri.parse(apiEndpoint));
+      final response = await http.get(
+        Uri.parse(apiEndpoint),
+        headers: {'Accept': 'application/json', 'User-Agent': 'FlutterApp'},
+      );
+
       if (response.statusCode == 200) {
         final List<dynamic> jsonData = jsonDecode(response.body);
         data = jsonData.map((e) => Posts.fromJson(e)).toList();

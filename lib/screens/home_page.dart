@@ -45,7 +45,10 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => provider.getDataFromApi(),
               child: const Icon(Icons.refresh),
             )
+<<<<<<< HEAD
             
+=======
+>>>>>>> 827ddc1 (final update on API integration)
           : null,
     );
   }
