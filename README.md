@@ -1,21 +1,23 @@
 # Flutter App with provider
 
-This is a Flutter project built as part of the **Junior Flutter Developer Technical Assessment**.  
-The app demonstrates API integration using http, state management with Provider, and basic testing.
-
+A simple Flutter application that fetches posts from an API (JSONPlaceholder) using http and displays them in a clean UI.
+It uses Provider for state management, includes unit tests and widget tests, and follows a clean project structure.
 ---
 
 ##  Features
 
-- Fetch posts from a public API (JSONPlaceholder).
+- Fetch posts from a REST API (JSONPlaceholder).
 - Display post titles in a clean list view.
-- Tap a post to see more details (title + body + userID).
-- If any error, tap a reload floating button to retry again.
+- View post details on a separate screen
+- Retry button when API fails
 - Handles loading with loading indicator making responsive UI, handle error, and success states.
-- Clean and beginner-friendly code structure.
+- Clean architecture (models, providers, screens separated)
 - Material 3 design with simple custom theme.
+- Unit tests for data fetching logic
+- Widget tests for UI validation
 
----
+
+ 
 
 ##  Project Structure (Clean Architecture)
 
@@ -47,10 +49,23 @@ This is a simplified clean structure:
 
 ##  Tech Stack
 
-- **Flutter** (3.x)
-- **Networking Library**: [`http`](https://pub.dev/packages/http)
+
+- **Flutter** (3.x) 
+- **Networking Library**: [`http`](https://pub.dev/packages/http) 
 - **State Management**: [`provider`](https://pub.dev/packages/provider)
 - **Other Packages**: [`Flutterspinkit](https://pub.dev/packages/flutter_spinkit)
+
+Flutter (UI framework)
+
+Provider (state management)
+
+http (API calls)
+
+flutter_spinkit (loading indicators)
+
+flutter_test (unit & widget testing)
+
+
 
 ##  How to Run the App
 
@@ -95,6 +110,10 @@ Data is fetched from JSONPlaceholder
 After sucessfull run Post will be display on the screen in List view.
 If API fails, an error message is displayed 
 Retry button will be on bottom right corner to retry.
+
+
+
+
 
 This is done by Rojina Shrama
 
