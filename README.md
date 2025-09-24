@@ -48,8 +48,8 @@ This is a simplified clean structure:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/
-   cd ....
+  [ git clone https://github.com/](https://github.com/Rojina-Sharma99/flutter_app_with_provider.git)
+  cd flutter_app_with_provider
 
 
 2.Install dependencies:
