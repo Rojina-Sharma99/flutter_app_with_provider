@@ -9,12 +9,12 @@ It uses Provider for state management, includes unit tests and widget tests, and
 - Fetch posts from a REST API (JSONPlaceholder).
 - Display post titles in a clean list view.
 - View post details on a separate screen.
-- Retry button when API fails
+- Retry button when API fails.
 - Handles loading with loading indicator making responsive UI, handle error, and success states.
-- Clean architecture (models, providers, screens separated)
+- Clean architecture (models, providers, screens separated).
 - Material 3 design with simple custom theme.
-- Unit tests for data fetching logic
-- Widget tests for UI validation
+- Unit tests for data fetching logic.
+- Widget tests for UI validation.
 
 
 ## Additional Features
@@ -57,7 +57,7 @@ This is a simplified clean structure:
 - **Models** -> represent API data (`Posts`).
 - **Providers** -> fetch data + manage loading/error states and success.
 - **Screens** -> Flutter UI (Home page  & Post_details page).
-- **Tests** -> unit test and widget test
+- **Tests** -> unit test and widget test.
 
 
 ##  Tech Stack
@@ -123,17 +123,17 @@ Included Tests
 
 ## Notes
 
-Data is fetched from JSONPlaceholder
+Data is fetched from JSONPlaceholder.
 After sucessfull run Post will be display on the screen in List view.
 Post list can be refreshed , scrollable and can be add to favourite
-If API fails, an error message is displayed 
-Retry button wi##ScreenShots
+If API fails, an error message is displayed.
+Retry button wi##ScreenShots.
 
 
 
 
 
 
-This is done by Rojina Shrama
+This App is created by Rojina Shrama.
 
      
